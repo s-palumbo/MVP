@@ -23,7 +23,7 @@ router.get("/:id", stepMustExist, async (req, res) => {
 
   try {
     const result = await db(getById);
-    res.status(200).send(result.data);
+    res.status(200).send(result.data[0]);
   } catch (err) {
     res.status(500).send(err);
   }
