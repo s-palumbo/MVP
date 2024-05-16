@@ -14,17 +14,21 @@ function App() {
 
   return (
     <>
-    <h1 className='text-3xl font-bold underline'>Hello Testing! </h1>
+
+  
+{/* <div className="bg-cover bg-center h-screen" style={{backgroundImage: 'url("https://images.unsplash.com/photo-1657880150007-a99d4cccaeaa")'}}>
+    <h1 className='text-7xl font-bold underline'>Hello Testing! </h1> */}
 
       
-      <div>
+      
 
       <Routes> 
         <Route path="/" element={<Start />}  />
         <Route path="/steps/:id" element={<Step />}  />
       </Routes>
 
-    </div>
+    
+{/* </div> */}
 
     </>
   );

@@ -2,6 +2,8 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link, useParams} from "react-router-dom";
 import Paper from '@mui/material/Paper';
+// import './App.css'
+// import './index.css'
 
 
 export default function start() {
