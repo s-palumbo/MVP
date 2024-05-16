@@ -9,13 +9,21 @@ export default function start() {
 
 
 
+
   return (
     <>
-    <div>
-        <h1>Let's Get Started!</h1>
-        <p>Choose Your Substrate:</p>
-    </div>
-    <h1>Follow me to paint some <br />  <Link to="/steps/1">STEEL</Link></h1> 
+
+      
+    
+      <div>
+          <h1 className='start-title' >Let's Get Started!</h1>
+          <p className='start-prompt'>Choose Your Substrate:</p>
+      </div>
+
+      <h1 className='start-selct' >Follow me to paint some <br />  
+      <Link className='start-link' to="/steps/1">STEEL</Link></h1> 
+
+    
 
     </>
   )

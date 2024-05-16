@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link, useParams} from "react-router-dom";
+import Paper from '@mui/material/Paper';
+
 
 export default function start() {
     const { id } = useParams();
@@ -31,15 +33,31 @@ export default function start() {
 
   return (
     <>
-  
-    <h1>{step.Description}</h1>
 
-    {/* <button onClick={handleClick}>{step.Text_1}</button> */}
+    <div>
+    <h1 className='description' > {step.Description} </h1>
+    </div>
+    
+    
+    <div className='stepButtons'>
 
     {step.Next_1 ? <ButtonLink to={`/steps/${step.Next_1}`}>{step.Text_1}</ButtonLink> : 
     <ButtonLink to={`/`}> ALL DONE!! </ButtonLink> }
     {step.Next_2 ? <ButtonLink to={`/steps/${step.Next_2}`}>{step.Text_2}</ButtonLink> : " " }
     {step.Next_3 ? <ButtonLink to={`/steps/${step.Next_3}`}>{step.Text_3}</ButtonLink> : " " }
+    
+    <ButtonLink to={-1}> ⏪ Take me Back </ButtonLink>
+    {/* <ButtonLink to={"/"} >Home</ButtonLink> */}
+
+    </div>
+
+    <div className='staticLinks'>
+      <nav>
+        <ul>
+          <li></li>
+        </ul>
+      </nav>
+    </div>
         
 
 
