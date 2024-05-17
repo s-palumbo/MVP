@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import './index.css'
 import { Routes, Route, Link} from "react-router-dom"; //import Routes and Route from react router dom 
 
 // import each page here in this format that links to file folder for that page
@@ -16,8 +17,8 @@ function App() {
     <>
 
   
-{/* <div className="bg-cover bg-center h-screen" style={{backgroundImage: 'url("https://images.unsplash.com/photo-1657880150007-a99d4cccaeaa")'}}>
-    <h1 className='text-7xl font-bold underline'>Hello Testing! </h1> */}
+ <div className="bg-cover bg-center h-screen" style={{backgroundImage: 'url("https://images.unsplash.com/photo-1622542796254-5b9c46ab0d2f")'}}>
+    <h1 className='text-7xl font-bold underline'>Hello Testing! </h1> 
 
       
       
@@ -28,7 +29,7 @@ function App() {
       </Routes>
 
     
-{/* </div> */}
+</div> 
 
     </>
   );

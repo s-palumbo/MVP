@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family:"Major Mono Display", monospace; ;
+    src: url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+  }
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -15,12 +22,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-} */
+} 
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  
   text-align: center;
   
 }
@@ -36,20 +43,19 @@ a:hover {
 
 ul, li {
   list-style-type: none;
-}
+} */
 
-body {
+/* body {
   margin: 0;
   display: flex;
   place-items: center;
   text-align: center;
-  min-width: 320px;
+  min-width: 320px;  
   min-height: 100vh;
   background-color: antiquewhite;
   background-image: url(https://images.unsplash.com/photo-1657880150007-a99d4cccaeaa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTMwfHxwYWludCUyMHNwcmF5aW5nfGVufDB8fDB8fHww);
   background-position: center;
   background-size: contain;
-
 }
 
 .startCard {
@@ -116,5 +122,5 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+}  */
 
