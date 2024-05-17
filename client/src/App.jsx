@@ -17,18 +17,13 @@ function App() {
     <>
 
   
- <div className="bg-cover bg-center h-screen" style={{backgroundImage: 'url("https://images.unsplash.com/photo-1622542796254-5b9c46ab0d2f")'}}>
-    <h1 className='text-7xl font-bold underline'>Hello Testing! </h1> 
-
-      
-      
-
-      <Routes> 
-        <Route path="/" element={<Start />}  />
-        <Route path="/steps/:id" element={<Step />}  />
-      </Routes>
-
-    
+<div className="bg-cover bg-repeat bg-center h-screen flex flex-col" style={{backgroundImage: 'url("https://images.unsplash.com/photo-1622542796254-5b9c46ab0d2f")'}}>
+  <div className='flex-grow'>
+    <Routes> 
+      <Route path="/" element={<Start />}  />
+      <Route path="/steps/:id" element={<Step />}  />
+    </Routes>
+  </div>
 </div> 
 
     </>

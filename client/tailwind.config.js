@@ -12,7 +12,10 @@ export default {
       },
       fontFamily: {
         'major-mono': ["Major Mono Display", 'monospace'],
-      }
+      },
+      fontFamily: {
+        'vercetti' : ['Vercetti-Regular', 'sans-serif'],
+      },
     },
 
   },

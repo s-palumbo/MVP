@@ -35,20 +35,23 @@ export default function start() {
 
   return (
     <>
-
-    <div>
-    <h1 className='description' > {step.Description} </h1>
+  <div className='h-screen flex flex-col justify-center items-center'>
+    <div className='grid grid-cols-6 grid-rows-6 m-4 p-4 gap-0 bg-orange-600 bg-opacity-50 items-center justify-center'>
+      <div className='col-span-6 row-span-6 flex items-center justify-center h-50'>
+      <p className='text-center'> {step.Description} </p>
+      </div>
+      
     </div>
     
     
-    <div className='stepButtons'>
+    <div className='grid grid '>
 
     {step.Next_1 ? <ButtonLink to={`/steps/${step.Next_1}`}>{step.Text_1}</ButtonLink> : 
     <ButtonLink to={`/`}> ALL DONE!! </ButtonLink> }
     {step.Next_2 ? <ButtonLink to={`/steps/${step.Next_2}`}>{step.Text_2}</ButtonLink> : " " }
     {step.Next_3 ? <ButtonLink to={`/steps/${step.Next_3}`}>{step.Text_3}</ButtonLink> : " " }
     
-    <ButtonLink to={-1}> ⏪ Take me Back </ButtonLink>
+    <ButtonLink to={-1}> Take me Back </ButtonLink>
     {/* <ButtonLink to={"/"} >Home</ButtonLink> */}
 
     </div>
@@ -60,7 +63,9 @@ export default function start() {
         </ul>
       </nav>
     </div>
-        
+  
+  
+  </div>      
 
 
 
