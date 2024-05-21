@@ -8,6 +8,7 @@ import { Routes, Route, Link} from "react-router-dom"; //import Routes and Route
 // import each page here in this format that links to file folder for that page
 import Start from './pages/start';
 import Step from './pages/step';
+import FooterNavbar from './components/FooterNavbar';
 
 
 function App() {
@@ -17,14 +18,17 @@ function App() {
     <>
 
   
-<div className="bg-cover bg-repeat bg-center h-screen flex flex-col" style={{backgroundImage: 'url("https://images.unsplash.com/photo-1622542796254-5b9c46ab0d2f")'}}>
-  <div className='flex-grow'>
+<div className="bg-cover bg-repeat bg-center min-h-screen flex flex-col" style={{backgroundImage: 'url("https://images.unsplash.com/photo-1622542796254-5b9c46ab0d2f")'}}>
+  <div className='flex-grow overflow-auto pb-16'>
     <Routes> 
       <Route path="/" element={<Start />}  />
       <Route path="/steps/:id" element={<Step />}  />
     </Routes>
   </div>
+  <FooterNavbar />
 </div> 
+
+
 
     </>
   );

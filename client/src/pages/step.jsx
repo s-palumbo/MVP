@@ -1,14 +1,10 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React,  { useState, useEffect } from 'react';
 import { Link, useParams} from "react-router-dom";
-import Paper from '@mui/material/Paper';
-// import './App.css'
-// import './index.css'
+
 
 
 export default function start() {
     const { id } = useParams();
-    // const history =  useHistory();
     const [ step, setStep ] = useState({});
     
 
@@ -20,13 +16,14 @@ export default function start() {
             });
     }, [id]);
 
-    // const handleClick = () => {
-    //     const nextStep = parseInt(id, 10) + 1;
-    //     history.push(`/steps/${nextStep}`);
-    // }
 
     function ButtonLink({ to, children }) {
-        return <Link to={to}><button>{children}</button></Link>;
+        return( <Link to={to}>
+          <button className='flex-1 m-2 p-4 bg-orange-700 opacity-100 text-white font-semi leading-relaxed tracking-wide hover:bg-orange-500 hover:shadow-2xl hover:scale-105 transition-all duration-300' >
+            {children}
+          </button>
+        </Link>
+      );
     }
 
 
@@ -34,41 +31,28 @@ export default function start() {
 
 
   return (
-    <>
+<>
   <div className='h-screen flex flex-col justify-center items-center'>
-    <div className='grid grid-cols-6 grid-rows-6 m-4 p-4 gap-0 bg-orange-600 bg-opacity-50 items-center justify-center'>
-      <div className='col-span-6 row-span-6 flex items-center justify-center h-50'>
-      <p className='text-center'> {step.Description} </p>
+    <div className='w-full max-w-4xl p-4'>
+      <div className='min-h-96 m-4 p-8 bg-white bg-opacity-60 backdrop-blur-md shadow-sharp flex items-center justify-center '>
+        <div className='font-vercetti text-xl'>
+        <p className='text-center text-7xl m-4'> {step.Description} </p>
+        </div>
       </div>
-      
-    </div>
     
     
-    <div className='grid grid '>
-
-    {step.Next_1 ? <ButtonLink to={`/steps/${step.Next_1}`}>{step.Text_1}</ButtonLink> : 
-    <ButtonLink to={`/`}> ALL DONE!! </ButtonLink> }
-    {step.Next_2 ? <ButtonLink to={`/steps/${step.Next_2}`}>{step.Text_2}</ButtonLink> : " " }
-    {step.Next_3 ? <ButtonLink to={`/steps/${step.Next_3}`}>{step.Text_3}</ButtonLink> : " " }
-    
-    <ButtonLink to={-1}> Take me Back </ButtonLink>
-    {/* <ButtonLink to={"/"} >Home</ButtonLink> */}
-
+      <div className='w-full mt-8'>
+          <div className='p-8 bg-white bg-opacity-85 shadow-sharp flex flex-wrap justify-center items-center gap-4'>
+            {step.Next_1 ? <ButtonLink to={`/steps/${step.Next_1}`}>{step.Text_1}</ButtonLink> : 
+            <ButtonLink to={`/`}> ALL DONE!! </ButtonLink> }
+            {step.Next_2 ? <ButtonLink to={`/steps/${step.Next_2}`}>{step.Text_2}</ButtonLink> : " " }
+            {step.Next_3 ? <ButtonLink to={`/steps/${step.Next_3}`}>{step.Text_3}</ButtonLink> : " " }
+            <ButtonLink to={-1}> Take me Back </ButtonLink>
+            <ButtonLink to={`/`} >Home</ButtonLink>
+        </div>
+      </div>
     </div>
-
-    <div className='staticLinks'>
-      <nav>
-        <ul>
-          <li></li>
-        </ul>
-      </nav>
-    </div>
-  
-  
   </div>      
-
-
-
-    </>
+</>
   )
 }
