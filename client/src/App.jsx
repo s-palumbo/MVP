@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import './index.css'
 import { Routes, Route, Link} from "react-router-dom"; //import Routes and Route from react router dom 
@@ -13,13 +10,11 @@ import FooterNavbar from './components/FooterNavbar';
 
 function App() {
   
+return (
+<>  
 
-  return (
-    <>
-
-  
 <div className="bg-cover bg-repeat bg-center min-h-screen flex flex-col" style={{backgroundImage: 'url("https://images.unsplash.com/photo-1622542796254-5b9c46ab0d2f")'}}>
-  <div className='flex-grow overflow-auto pb-16'>
+  <div className='flex-grow overflow-auto pb-20'>
     <Routes> 
       <Route path="/" element={<Start />}  />
       <Route path="/steps/:id" element={<Step />}  />
@@ -28,9 +23,8 @@ function App() {
   <FooterNavbar />
 </div> 
 
+</>
 
-
-    </>
   );
 }
 
