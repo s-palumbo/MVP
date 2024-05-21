@@ -3,7 +3,7 @@ import { Link, useParams} from "react-router-dom";
 
 
 
-export default function start() {
+export default function Step() {
     const { id } = useParams();
     const [ step, setStep ] = useState({});
     
@@ -32,11 +32,11 @@ export default function start() {
 
   return (
 <>
-  <div className='h-screen flex flex-col justify-center items-center'>
+  <div className='min-h-screen flex flex-col justify-center items-center p-4'>
     <div className='w-full max-w-4xl p-4'>
       <div className='min-h-96 m-4 p-8 bg-white bg-opacity-60 backdrop-blur-md shadow-sharp flex items-center justify-center '>
         <div className='font-vercetti text-xl'>
-        <p className='text-center text-7xl m-4'> {step.Description} </p>
+        <p className='text-center text-4xl md:text-7xl m-4'> {step.Description} </p>
         </div>
       </div>
     

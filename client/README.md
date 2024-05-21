@@ -9,7 +9,7 @@
 
 ## Tech Specs / Stack 
 
-- The flowchart is built on a MySQL database with a "description" for the substrate, and an option of three "TEXT" branches with descriptions of variables the user may encounter, and three corresponding "NEXT" options which point to the IDs of the next appropriate step.
+- The flowchart is built on a MySQL database with a "description" for the substrate, options for three "TEXT" branches with variables the user may encounter, and three corresponding "NEXT" options which point to the IDs of the next appropriate step.
 
  - The back-end tools used are Node.js and Express.
 

@@ -1,10 +1,10 @@
 import './App.css'
 import './index.css'
-import { Routes, Route, Link} from "react-router-dom"; //import Routes and Route from react router dom 
+import { Routes, Route } from "react-router-dom"; //import Routes and Route from react router dom 
 
 // import each page here in this format that links to file folder for that page
-import Start from './pages/start';
-import Step from './pages/step';
+import Start from './pages/Start';
+import Step from './pages/Step';
 import FooterNavbar from './components/FooterNavbar';
 
 
