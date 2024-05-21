@@ -11,7 +11,7 @@ export default function start() {
     <>
 <div className='min-h-screen flex flex-col justify-center items-center'>
 
-  <div className='flex flex-col justify-center items-center m-20 '>
+  <div className='flex flex-col justify-center items-center m-20 w-2/3 '>
     <div className='p-4 flex flex-col items-center justify-center bg-white bg-opacity-80 backdrop-blur-md shadow-sharp min-h-64' >
       <div className='text-center leading-relaxed font-vercetti flex flex-col justify-center min-w-0'>
         <p className='text-4xl md:text-6xl font-semibold m-4'  >SO YOU NEED TO PAINT SOMETHING?!</p>
