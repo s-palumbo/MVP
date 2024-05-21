@@ -19,7 +19,7 @@ export default function start() {
 
     function ButtonLink({ to, children }) {
         return( <Link to={to}>
-          <button className='flex-1 m-2 p-4 bg-orange-700 opacity-100 text-white font-semi leading-relaxed tracking-wide hover:bg-orange-500 hover:shadow-2xl hover:scale-105 transition-all duration-300' >
+          <button className='flex-1 m-2 p-4 bg-orange-700 opacity-100 text-white font-vercetti leading-relaxed tracking-widest hover:bg-orange-500 hover:shadow-2xl hover:scale-105 transition-all duration-300' >
             {children}
           </button>
         </Link>
@@ -47,8 +47,8 @@ export default function start() {
             <ButtonLink to={`/`}> ALL DONE!! </ButtonLink> }
             {step.Next_2 ? <ButtonLink to={`/steps/${step.Next_2}`}>{step.Text_2}</ButtonLink> : " " }
             {step.Next_3 ? <ButtonLink to={`/steps/${step.Next_3}`}>{step.Text_3}</ButtonLink> : " " }
-            <ButtonLink to={-1}> Take me Back </ButtonLink>
-            <ButtonLink to={`/`} >Home</ButtonLink>
+            <ButtonLink to={-1}>take me back</ButtonLink>
+            <ButtonLink to={`/`} >home</ButtonLink>
         </div>
       </div>
     </div>
