@@ -18,12 +18,64 @@
 
 ## SETUP
 
+### Prerequisites
+- MySQL: Make sure MySQL is installed on your machine. This project was made with version 8.0.37. You can download it from https://dev.mysql.com/downloads/ 
+
+
+
+
 ### Dependencies:
 
 - Run `npm install` in the project directory to install server dependencies. 
 - `cd client` and run `npm install` to install client dependencies.
 
-### Database
+## Database Setup
+
+1. **Access MySQL**:
+   - Open your terminal and run the following command to log in to MySQL:
+     ```bash
+     mysql -u root -p
+     ```
+   - Enter your MySQL password when prompted.
+
+2. **Create the Database**:
+   - Once logged in, create a new database named `mvp`:
+     ```sql
+     CREATE DATABASE mvp;
+     ```
+   - Exit the MySQL interface by typing `exit`.
+
+3. **Set Up Environment Variables**:
+   - Create a `.env` file in your project folder and add the following lines:
+     ```bash
+     DB_HOST=localhost
+     DB_USER=root
+     DB_NAME=mvp
+     DB_PASS=YOURPASSWORD
+     ```
+   - Replace `YOURPASSWORD` with your actual MySQL password.
+
+4. **Run Migrations**:
+   - In the terminal, run the following command to import the `steps` table and all existing data:
+     ```bash
+     npm run migrate
+     ```
+   - This command assumes you have a migration tool configured in your project that reads the database connection from your `.env` file and runs migration files located in a specific directory (like a `migrations` folder). Ensure that the migrations are correctly set up in your project.
+
+5. **Backup Option (Optional)**:
+   - If there's an issue with the migration or you need to manually set up the database, you can use the `init_db.sql` file located in the `"model"` folder. This file contains the SQL statements needed to create the `steps` table and insert initial data.
+   - To manually run the `init_db.sql` file:
+     ```bash
+     mysql -u root -p mvp < path_to_your_project/model/init_db.sql
+     ```
+   - Replace `path_to_your_project` with the actual path to your project.
+
+### Summary
+
+Following these steps will set up your database and import the necessary tables and data into your MySQL instance.
+
+
+<!-- ### Database
 
 - Access your MySQL interface by running `mysql -u root -p` in your terminal. 
 
@@ -38,7 +90,7 @@
 
 - run `npm migrate` which will import the table called `steps` and all of the currently existing data. 
 
-- The `"model"` folder contains an `init_db.sql` file which contains the information for the table as well as in insert statement in case it's needed as backup or there's a problem importing the database. 
+- The `"model"` folder contains an `init_db.sql` file which contains the information for the table as well as in insert statement in case it's needed as backup or there's a problem importing the database.  -->
 
 ## Development
 
