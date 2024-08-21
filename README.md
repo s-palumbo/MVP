@@ -32,18 +32,16 @@
 ## Database Setup
 
 1. **Access MySQL**:
-   - Open your terminal and run the following command to log in to MySQL:
-     ```bash
-     mysql -u root -p
-     ```
+   - Open the MySQL CLI
    - Enter your MySQL password when prompted.
+
 
 2. **Create the Database**:
    - Once logged in, create a new database named `mvp`:
      ```sql
      CREATE DATABASE mvp;
      ```
-   - Exit the MySQL interface by typing `exit`.
+   - You can check to see that the Database was successfully created with the command `show databases;`
 
 3. **Set Up Environment Variables**:
    - Create a `.env` file in your project folder and add the following lines:
@@ -56,11 +54,17 @@
    - Replace `YOURPASSWORD` with your actual MySQL password.
 
 4. **Run Migrations**:
-   - In the terminal, run the following command to import the `steps` table and all existing data:
+  - In MySQL run the command `use mvp`
+   - In your terminal, run the following command in your project's root folder to import the `steps` table and all existing data:
      ```bash
      npm run migrate
      ```
-   - This command assumes you have a migration tool configured in your project that reads the database connection from your `.env` file and runs migration files located in a specific directory (like a `migrations` folder). Ensure that the migrations are correctly set up in your project.
+   - You should see the message "Table creation `steps` was successful!"
+      - **This command assumes you have a migration tool configured in your project that reads the database connection from your `.env` file and runs migration files located in a specific directory (like a `migrations` folder). Ensure that the migrations are correctly set up in your project.
+  - With the following commands in the MySQL CLI you can ensure the data was imported into the MVP Database:
+    - `describe steps;`
+    - `select * from steps`
+  - If you see a populated table, you have succeeded in migrating the data! Yay!
 
 5. **Backup Option (Optional)**:
    - If there's an issue with the migration or you need to manually set up the database, you can use the `init_db.sql` file located in the `"model"` folder. This file contains the SQL statements needed to create the `steps` table and insert initial data.
